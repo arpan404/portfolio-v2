@@ -1,0 +1,40 @@
+.bg-music-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.bg-music-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.bg-music-checkmark {
+  transition: 0.3s;
+  box-shadow: 4px 4px 8px #003f7d, -4px -4px 8px #003f7d;
+}
+
+.music-icon {
+  fill: #692305;
+  transition: 0.2s;
+}
+
+.bg-music-checkmark:active {
+  box-shadow: 2px 2px 3px #ff8e00, -2px -2px 3px #ff8e00;
+}
+
+.bg-music-checkbox:checked ~ .bg-music-checkmark {
+  box-shadow: 4px 4px 6px #fd7702, -4px -4px 6px #003f7d;
+}
+
+.bg-music-checkbox:checked ~ .bg-music-checkmark svg {
+  fill: #e75415;
+}
+.bg-music-container input:checked ~ .bg-music-checkmark:active {
+  box-shadow: 2px 2px 3px #000000, -2px -2px 3px #3c3c3c;
+}
