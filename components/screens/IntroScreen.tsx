@@ -5,7 +5,7 @@ import Intro from "../misc/Intro";
 export default function IntroScreen() {
   return (
     <>
-      <div className="h-[100dvh] relative flex items-center">
+      <div className="min-h-[100dvh] relative flex items-center">
         <div className="absolute w-full top-0">
           <TopNavBar />
         </div>
