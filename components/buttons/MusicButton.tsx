@@ -26,6 +26,7 @@ export default function BackgroundAudio() {
           className="bg-music-checkbox"
           type="checkbox"
           onChange={handleMusicPlay}
+          aria-label="background music play pause"
         />
         <div className="bg-music-checkmark h-[40px] w-[40px] rounded-full sm:h-[60px] sm:w-[60px] md:h-[65px] md:w-[65px] lg:w-[68px] lg:h-[68px] flex justify-center items-center bg-[#151515] relative">
           <svg

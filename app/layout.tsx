@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={"bg-[#002347] " + font.className}>{children}</body>
+      <body className={"bg-[#002347] custom_page_scroll overflow-y-scroll overflow-x-hidden" + font.className}>{children}</body>
     </html>
   );
 }
