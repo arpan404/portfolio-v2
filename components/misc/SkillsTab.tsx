@@ -34,12 +34,12 @@ export default function SkillsTab() {
               onChange={handleClick}
               defaultValue={"Programming Language"}
             >
-              <option label="all tools & tech">All Tools & Tech</option>
-              <option label="programming language">Programming Language</option>
-              <option label="frameworks">Frameworks</option>
-              <option label="databases">Databases</option>
-              <option label="tools">Tools</option>
-              <option label="other technologies">Other</option>
+              <option label="All Tools & Tech">All Tools & Tech</option>
+              <option label="Programming Language">Programming Language</option>
+              <option label="Frameworks">Frameworks</option>
+              <option label="Databases">Databases</option>
+              <option label="Tools">Tools</option>
+              <option label="Other">Other</option>
             </select>
           </span>
         </span>

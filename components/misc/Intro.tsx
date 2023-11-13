@@ -15,7 +15,7 @@ export default function Intro() {
               Aspiring scholar & seasoned software engineer.
             </h2>
           </span>
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-4 mt-6 flex-wrap">
             <button className="group hover:bg-sky-600 relative bg-sky-700 rounded-lg text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6">
               <AiFillLinkedin className="text-3xl" />
               <span className="border-l-2 px-1">arpan404</span>
