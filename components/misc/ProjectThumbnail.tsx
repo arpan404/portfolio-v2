@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { MouseEventHandler } from "react";
 
 type PROPS = {
   thumbnail: string;
@@ -18,9 +17,9 @@ export default function ProjectThumbnail({
       <div className="p-2 w-full">
         <Image
           src={thumbnail}
-          height={500}
           width={500}
-          alt=""
+          height={500}
+          alt={name+"'s logo"}
           className="max-w-full rounded-xl cursor-pointer"
           draggable={false}
           onClick={handleProjectClick}

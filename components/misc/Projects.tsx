@@ -1,16 +1,20 @@
 "use client";
 import projectList, { PROJECT_DETAIL } from "@/utils/projectList";
 import ProjectThumbnail from "./ProjectThumbnail";
-import { MouseEventHandler, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import useGlobalStore from "@/state";
 
 export default function Projects() {
   const [isMore, setMore] = useState<boolean>(false);
+  const router = useRouter();
   const searchParams = useSearchParams();
+  const setCurrentProject = useGlobalStore((state) => state.setCurrentProject);
   const handleProjectClick = (slug: string) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set("project", slug);
-    window.history.pushState(null, "", `?${params.toString()}`);
+    router.push(`/?project=${slug}`, { scroll: false });
+    setCurrentProject(slug);
   };
   return (
     <div className="w-full md:py-10 py-8">

@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -42,4 +45,17 @@ html {
 }
 .custom_page_scroll::-ms-scrollbar-thumb:hover {
   background-color: #ff5003;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(53, 53, 53, 0.7) !important;
+  height: 100dvh;
+  overflow-y: scroll !important;
+  padding: 30px 10px;
+}
+@media screen and (min-width: 720px) {
+  .ReactModal__Overlay {
+    padding: 40px 20px;
+    padding-left: calc(50% - 360px);
+  }
 }
