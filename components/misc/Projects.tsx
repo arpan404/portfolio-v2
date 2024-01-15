@@ -23,18 +23,22 @@ export default function Projects() {
             if (isMore) {
               return (
                 <ProjectThumbnail
+                  key={index}
                   thumbnail={project.thumbnail}
                   name={project.name}
                   description={project.shortDescription}
+                  slug={project.slug!}
                 />
               );
             }
             if (!isMore && index < 6) {
               return (
                 <ProjectThumbnail
+                  key={index}
                   thumbnail={project.thumbnail}
                   name={project.name}
                   description={project.shortDescription}
+                  slug={project.slug!}
                 />
               );
             }
