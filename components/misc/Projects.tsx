@@ -1,10 +1,17 @@
 "use client";
 import projectList, { PROJECT_DETAIL } from "@/utils/projectList";
 import ProjectThumbnail from "./ProjectThumbnail";
-import { useState } from "react";
+import { MouseEventHandler, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function Projects() {
   const [isMore, setMore] = useState<boolean>(false);
+  const searchParams = useSearchParams();
+  const handleProjectClick = (slug: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("project", slug);
+    window.history.pushState(null, "", `?${params.toString()}`);
+  };
   return (
     <div className="w-full md:py-10 py-8">
       <div className="flex justify-center w-full">
@@ -27,7 +34,7 @@ export default function Projects() {
                   thumbnail={project.thumbnail}
                   name={project.name}
                   description={project.shortDescription}
-                  slug={project.slug!}
+                  handleProjectClick={() => handleProjectClick(project.slug)}
                 />
               );
             }
@@ -38,7 +45,7 @@ export default function Projects() {
                   thumbnail={project.thumbnail}
                   name={project.name}
                   description={project.shortDescription}
-                  slug={project.slug!}
+                  handleProjectClick={() => handleProjectClick(project.slug)}
                 />
               );
             }

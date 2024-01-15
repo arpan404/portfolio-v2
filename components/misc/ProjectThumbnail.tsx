@@ -1,27 +1,18 @@
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 import { MouseEventHandler } from "react";
 
 type PROPS = {
   thumbnail: string;
   name: string;
   description: string;
-  slug: string;
+  handleProjectClick: () => void;
 };
 export default function ProjectThumbnail({
   thumbnail,
   name,
   description,
-  slug,
+  handleProjectClick,
 }: PROPS) {
-  const searchParams = useSearchParams();
-  const handleProjectClick:
-    | MouseEventHandler<HTMLImageElement>
-    | MouseEventHandler<HTMLHeadingElement> = () => {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("project", slug);
-    window.history.pushState(null, "", `?${params.toString()}`);
-  };
   return (
     <div className="h-[240px] w-[300px] bg-[#003366] rounded-2xl select-none cursor-default">
       <div className="p-2 w-full">
