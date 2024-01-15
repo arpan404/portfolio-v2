@@ -17,11 +17,13 @@ export default function ProjectThumbnail({
       <div className="p-2 w-full">
         <Image
           src={thumbnail}
-          width={500}
-          height={500}
-          alt={name+"'s logo"}
+          width={700}
+          height={700}
+          alt={name + "'s logo"}
           className="max-w-full rounded-xl cursor-pointer"
           draggable={false}
+          priority={false}
+          loading="lazy"
           onClick={handleProjectClick}
         />
       </div>

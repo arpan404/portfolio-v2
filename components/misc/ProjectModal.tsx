@@ -31,26 +31,27 @@ export default function ProjectModal() {
     setModalOpen(false);
     document.body.style.overflowY = "scroll";
   };
-  const handleOpen = () => {
+  const handleOpen = (currentProject: string) => {
     setCurrentProjectDetail(
       projectList.filter(
         (project: PROJECT_DETAIL) => project.slug === currentProject
       )[0]
     );
+    console.log(currentProject);
     document.body.style.overflowY = "hidden";
     setModalOpen(true);
   };
   useEffect(() => {
     if (currentProject) {
-      if (!modalOpen) handleOpen();
+      if (!modalOpen) handleOpen(currentProject);
     } else if (isInitialLoad.current) {
       isInitialLoad.current = false;
       if (currentProjectSlug && isValidProjectSlug(currentProjectSlug)) {
         setCurrentProject(currentProjectSlug);
-        if (!modalOpen) handleOpen();
+        if (!modalOpen) handleOpen(currentProjectSlug);
       }
     }
-  }, [currentProject, currentProjectSlug]);
+  }, [currentProject, handleOpen, handleClose, setCurrentProject]);
   const isValidProjectSlug = (slug: string): boolean => {
     return projectList.some((project: PROJECT_DETAIL) => project.slug === slug);
   };
@@ -77,6 +78,7 @@ export default function ProjectModal() {
                 width={700}
                 height={700}
                 alt={currentProjectDetail?.name + "'s cover image"}
+                priority={true}
               ></Image>
               <div className="absolute h-[60px] bottom-[0px] w-full bg-gradient-to-b from-transparent to-[#003366] opacity-100 ">
                 <div className="flex pl-4 gap-3 relative sm:-top-[30px] items-center">
