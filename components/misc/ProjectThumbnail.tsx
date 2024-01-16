@@ -20,7 +20,7 @@ export default function ProjectThumbnail({
           width={700}
           height={700}
           alt={name + "'s logo"}
-          className="max-w-full rounded-xl cursor-pointer"
+          className="max-w-full rounded-xl cursor-pointer max-h-[160px]"
           draggable={false}
           priority={true}
           onClick={handleProjectClick}
