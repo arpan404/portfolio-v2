@@ -22,8 +22,7 @@ export default function ProjectThumbnail({
           alt={name + "'s logo"}
           className="max-w-full rounded-xl cursor-pointer"
           draggable={false}
-          priority={false}
-          loading="lazy"
+          priority={true}
           onClick={handleProjectClick}
         />
       </div>

@@ -31,6 +31,7 @@ export default function Intro() {
           alt=""
           className="lg:w-[500px]  w-[250px] sm:w-[200px] md:w-[250px]"
           draggable={false}
+          priority={true}
         />
       </div>
     </main>

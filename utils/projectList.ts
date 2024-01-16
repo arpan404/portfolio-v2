@@ -22,7 +22,7 @@ export type TECH =
   | "PostreSQL"
   | "Redux"
   | "Zustand";
-type TAGS = "backend" | "open source" | "frontend";
+
 export type PROJECT_DETAIL = {
   name: string;
   description: string;
@@ -31,7 +31,6 @@ export type PROJECT_DETAIL = {
   liveLink?: string;
   thumbnail: string;
   tech: Array<TECH>;
-  tags: Array<TAGS>;
   images?: Array<string>;
   slug: string;
 };
@@ -43,74 +42,56 @@ const projectList: Array<PROJECT_DETAIL> = [
       "Joor is a cutting-edge, open-source backend framework specifically designed for NodeJS, offering full support for both TypeScript and JavaScript.",
     shortDescription: "A backend framework",
     codeLink: "https://github.com/arpan404/joor",
-    liveLink: "https://github.com/arpan404/joor",
+    liveLink: "https://www.npmjs.com/package/joor",
     thumbnail: "/images/projects/joor-thumbnail.png",
-    tech: [
-      "NodeJS",
-      "TailwindCSS",
-      "React",
-      "Firebase",
-      "NextJS",
-      "MySQL",
-      "Python",
-      "Express",
-      "Bootstrap",
-      "ReactNative",
-      "C",
-      "CSS",
-      "HTML",
-      "PHP",
-      "Typescript",
-      "Javascript",
-      "Cpp",
-      "Expo",
-      "MUI",
-      "MongoDB",
-      "PostreSQL",
-      "Redux",
-      "Zustand",
-    ],
-    tags: ["backend", "open source"],
+    tech: ["NodeJS", "Typescript", "Javascript"],
     slug: "joor",
   },
   {
     name: "Taskey",
     description: "Taskey is a ",
     shortDescription: "The ultimate key to task mastery",
-    codeLink: "https://github.com/arpan404/joor",
+    liveLink: "https://taskey.arpanbhandari.com.np/",
     thumbnail: "/images/projects/taskey-thumbnail.png",
-    tech: ["NodeJS"],
-    tags: ["backend", "open source"],
+    tech: [
+      "NextJS",
+      "Firebase",
+      "Typescript",
+      "Redux",
+      "TailwindCSS",
+      "MUI",
+      "CSS",
+    ],
+
     slug: "taskey",
   },
   {
     name: "Socioy",
     description: "Taskey is a ",
     shortDescription: "A social media webapp",
-    codeLink: "https://github.com/arpan404/joor",
+    codeLink: "https://github.com/arpan404/socioy-webapp-basic",
     thumbnail: "/images/projects/socioy-thumbnail.png",
-    tech: ["NodeJS"],
-    tags: ["backend", "open source"],
+    tech: ["PHP", "Javascript", "HTML", "CSS", "MySQL"],
+
     slug: "socioy",
   },
   {
     name: "EnKrypt",
     description: "A custom encryption algorithm",
     shortDescription: "A custom encryption algorithm",
-    codeLink: "https://github.com/arpan404/joor",
+    codeLink: "https://github.com/arpan404/enkrypt",
     thumbnail: "/images/projects/enkrypt-thumbnail.png",
-    tech: ["NodeJS"],
-    tags: ["backend", "open source"],
+    tech: ["Python"],
+
     slug: "enkrypt",
   },
   {
     name: "Ende",
     description: "Taskey is a ",
     shortDescription: "A webapp for encryption of messages",
-    codeLink: "https://github.com/arpan404/joor",
+    codeLink: "https://github.com/arpan404/ende",
     thumbnail: "/images/projects/ende-thumbnail.png",
-    tech: ["NodeJS"],
-    tags: ["backend", "open source"],
+    tech: ["React", "Javascript", "TailwindCSS"],
     slug: "ende",
   },
   {
@@ -119,41 +100,48 @@ const projectList: Array<PROJECT_DETAIL> = [
     shortDescription: "A webapp for hotel.",
     codeLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/hotelapp-thumbnail.png",
-    tech: ["NodeJS"],
-    tags: ["backend", "open source"],
+    tech: [
+      "NextJS",
+      "Javascript",
+      "NodeJS",
+      "Express",
+      "MySQL",
+      "Redux",
+      "TailwindCSS",
+      "MUI",
+    ],
+
     slug: "hotel-app",
   },
   {
     name: "UBT Alpha",
     description: "Taskey is a ",
     shortDescription: "A mobile app for simulating exam.",
-    codeLink: "https://github.com/arpan404/joor",
-    liveLink: "https://github.com/arpan404/joor",
+    liveLink:
+      "https://play.google.com/store/apps/details?id=com.arpan404.ubtalpha",
     thumbnail: "/images/projects/ubtalpha-thumbnail.png",
-    tech: ["NodeJS"],
-    tags: ["backend", "open source"],
+    tech: ["ReactNative", "Typescript", "Expo", "TailwindCSS", "Zustand"],
+
     slug: "ubt-alpha",
   },
   {
     name: "Newsy",
     description: "Taskey is a ",
     shortDescription: "A webapp for getting news",
-    codeLink: "https://github.com/arpan404/joor",
-    liveLink: "https://github.com/arpan404/joor",
+    codeLink: "https://github.com/arpan404/newsy",
     thumbnail: "/images/projects/newsy-thumbnail.png",
-    tech: ["NodeJS"],
-    tags: ["backend", "open source"],
+    tech: ["React", "Javascript", "Bootstrap"],
+
     slug: "newsy",
   },
   {
     name: "Texty",
     description: "Taskey is a ",
     shortDescription: "A webapp for manipulating strings",
-    codeLink: "https://github.com/arpan404/joor",
-    liveLink: "https://github.com/arpan404/joor",
+    codeLink: "https://github.com/arpan404/texty",
+    liveLink: "https://texty.arpanbhandari.com.np/",
     thumbnail: "/images/projects/texty-thumbnail.png",
-    tech: ["NodeJS"],
-    tags: ["backend", "open source"],
+    tech: ["React", "Javascript", "Bootstrap"],
     slug: "texty",
   },
 ];
