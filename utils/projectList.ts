@@ -1,4 +1,27 @@
-type TECH = "Node.JS" | "";
+export type TECH =
+  | "NodeJS"
+  | "TailwindCSS"
+  | "React"
+  | "Firebase"
+  | "NextJS"
+  | "MySQL"
+  | "Python"
+  | "Express"
+  | "Bootstrap"
+  | "ReactNative"
+  | "Typescript"
+  | "Javascript"
+  | "HTML"
+  | "CSS"
+  | "PHP"
+  | "C"
+  | "Cpp"
+  | "Expo"
+  | "MUI"
+  | "MongoDB"
+  | "PostreSQL"
+  | "Redux"
+  | "Zustand";
 type TAGS = "backend" | "open source" | "frontend";
 export type PROJECT_DETAIL = {
   name: string;
@@ -17,12 +40,36 @@ const projectList: Array<PROJECT_DETAIL> = [
   {
     name: "Joor",
     description:
-      "Joor is a cutting-edge, open-source backend framework specifically designed for Node.js, offering full support for both TypeScript and JavaScript.",
+      "Joor is a cutting-edge, open-source backend framework specifically designed for NodeJS, offering full support for both TypeScript and JavaScript.",
     shortDescription: "A backend framework",
     codeLink: "https://github.com/arpan404/joor",
     liveLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/joor-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: [
+      "NodeJS",
+      "TailwindCSS",
+      "React",
+      "Firebase",
+      "NextJS",
+      "MySQL",
+      "Python",
+      "Express",
+      "Bootstrap",
+      "ReactNative",
+      "C",
+      "CSS",
+      "HTML",
+      "PHP",
+      "Typescript",
+      "Javascript",
+      "Cpp",
+      "Expo",
+      "MUI",
+      "MongoDB",
+      "PostreSQL",
+      "Redux",
+      "Zustand",
+    ],
     tags: ["backend", "open source"],
     slug: "joor",
   },
@@ -32,7 +79,7 @@ const projectList: Array<PROJECT_DETAIL> = [
     shortDescription: "The ultimate key to task mastery",
     codeLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/taskey-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: ["NodeJS"],
     tags: ["backend", "open source"],
     slug: "taskey",
   },
@@ -42,7 +89,7 @@ const projectList: Array<PROJECT_DETAIL> = [
     shortDescription: "A social media webapp",
     codeLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/socioy-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: ["NodeJS"],
     tags: ["backend", "open source"],
     slug: "socioy",
   },
@@ -52,7 +99,7 @@ const projectList: Array<PROJECT_DETAIL> = [
     shortDescription: "A custom encryption algorithm",
     codeLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/enkrypt-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: ["NodeJS"],
     tags: ["backend", "open source"],
     slug: "enkrypt",
   },
@@ -62,7 +109,7 @@ const projectList: Array<PROJECT_DETAIL> = [
     shortDescription: "A webapp for encryption of messages",
     codeLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/ende-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: ["NodeJS"],
     tags: ["backend", "open source"],
     slug: "ende",
   },
@@ -72,7 +119,7 @@ const projectList: Array<PROJECT_DETAIL> = [
     shortDescription: "A webapp for hotel.",
     codeLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/hotelapp-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: ["NodeJS"],
     tags: ["backend", "open source"],
     slug: "hotel-app",
   },
@@ -83,7 +130,7 @@ const projectList: Array<PROJECT_DETAIL> = [
     codeLink: "https://github.com/arpan404/joor",
     liveLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/ubtalpha-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: ["NodeJS"],
     tags: ["backend", "open source"],
     slug: "ubt-alpha",
   },
@@ -94,7 +141,7 @@ const projectList: Array<PROJECT_DETAIL> = [
     codeLink: "https://github.com/arpan404/joor",
     liveLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/newsy-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: ["NodeJS"],
     tags: ["backend", "open source"],
     slug: "newsy",
   },
@@ -105,7 +152,7 @@ const projectList: Array<PROJECT_DETAIL> = [
     codeLink: "https://github.com/arpan404/joor",
     liveLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/texty-thumbnail.png",
-    tech: ["Node.JS"],
+    tech: ["NodeJS"],
     tags: ["backend", "open source"],
     slug: "texty",
   },

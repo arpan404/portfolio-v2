@@ -1,17 +1,180 @@
 "use client";
 
 import useGlobalStore from "@/state";
-import projectList, { PROJECT_DETAIL } from "@/utils/projectList";
+import projectList, { PROJECT_DETAIL, TECH } from "@/utils/projectList";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { Suspense, useEffect, useRef, useState } from "react";
 import Modal from "react-modal";
 import Image from "next/image";
-import { AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
 import { RxCross2 } from "react-icons/rx";
-import { FaCode } from "react-icons/fa";
+import {
+  FaCode,
+  FaNodeJs,
+  FaReact,
+  FaPython,
+  FaBootstrap,
+  FaHtml5,
+} from "react-icons/fa";
+import { BiLogoTailwindCss } from "react-icons/bi";
+import { IoLogoFirebase } from "react-icons/io5";
+import { TbBrandNextjs, TbBrandReactNative, TbBrandCpp } from "react-icons/tb";
+import { GiBearFace } from "react-icons/gi";
+import {
+  SiMysql,
+  SiExpress,
+  SiTypescript,
+  SiJavascript,
+  SiExpo,
+  SiMui,
+  SiRedux,
+  SiPostgresql,
+  SiMongodb,
+  SiPhp,
+} from "react-icons/si";
+import { FaC } from "react-icons/fa6";
 
+const technologies: Record<TECH, any> = {
+  TailwindCSS: (
+    <BiLogoTailwindCss
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="TailwindCSS"
+    />
+  ),
+  NodeJS: (
+    <FaNodeJs
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="NodeJS"
+    />
+  ),
+  React: (
+    <FaReact
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="React"
+    />
+  ),
+  Firebase: (
+    <IoLogoFirebase
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Firebase"
+    />
+  ),
+  NextJS: (
+    <TbBrandNextjs
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="NextJS"
+    />
+  ),
+  MySQL: (
+    <SiMysql
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="MySQL"
+    />
+  ),
+  Python: (
+    <FaPython
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Python"
+    />
+  ),
+  Express: (
+    <SiExpress
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Express"
+    />
+  ),
+  Bootstrap: (
+    <FaBootstrap
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Bootstrap"
+    />
+  ),
+  ReactNative: (
+    <TbBrandReactNative
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="ReactNative"
+    />
+  ),
+  Typescript: (
+    <SiTypescript
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Typescript"
+    />
+  ),
+  Javascript: (
+    <SiJavascript
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Javascript"
+    />
+  ),
+  HTML: (
+    <FaHtml5 
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="HTML"
+    />
+  ),
+  CSS: (
+    <TbBrandReactNative
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="CSS"
+    />
+  ),
+  PHP: (
+    <SiPhp 
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="PHP"
+    />
+  ),
+  C: (
+    <FaC
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="ReactNative"
+    />
+  ),
+  Cpp: (
+    <TbBrandCpp
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="C++"
+    />
+  ),
+  Expo: (
+    <SiExpo
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Expo"
+    />
+  ),
+  MUI: (
+    <SiMui
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="MUI"
+    />
+  ),
+  MongoDB: (
+    <SiMongodb
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="MongoDB"
+    />
+  ),
+  PostreSQL: (
+    <SiPostgresql
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="PostreSQL"
+    />
+  ),
+  Redux: (
+    <SiRedux
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Redux"
+    />
+  ),
+  Zustand: (
+    <GiBearFace
+      className="text-gray-300 text-3xl hover:text-gray-100 cursor-pointer"
+      title="Zustand"
+    />
+  ),
+};
 export default function ProjectModal() {
   const router = useRouter();
   const currentProject = useGlobalStore((state) => state.currentProject);
@@ -21,7 +184,6 @@ export default function ProjectModal() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [currentProjectDetail, setCurrentProjectDetail] =
     useState<PROJECT_DETAIL | null>(null);
-
   const isInitialLoad = useRef(true);
   const handleClose = () => {
     const params = new URLSearchParams(currentProjectParams.toString());
@@ -111,13 +273,15 @@ export default function ProjectModal() {
               <h2 className="text-3xl font-semibold text-gray-100 ">
                 {currentProjectDetail?.name}
               </h2>
-              <h3 className="text-md font-normal text-gray-300">{currentProjectDetail?.description}</h3>
+              <h3 className="text-md font-normal text-gray-300">
+                {currentProjectDetail?.description}
+              </h3>
               <div className="pt-4">
                 <h2 className="text-xl font-medium text-gray-200">
                   Technologies
                 </h2>
-                <div>
-                  
+                <div className="flex gap-2 items-center">
+                  {currentProjectDetail?.tech.map((tech) => technologies[tech])}
                 </div>
               </div>
             </div>
