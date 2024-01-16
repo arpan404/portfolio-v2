@@ -88,7 +88,7 @@ export default function ProjectModal() {
                         href={currentProjectDetail?.liveLink}
                         target="_blank"
                       >
-                        <button className="bg-gray-200 hover:bg-gray-50 h-[45px] px-6 text-lg font-medium rounded-md transition-all ease-out delay-75 drop-shadow-lg">
+                        <button className="bg-gray-200 hover:bg-gray-50 sm:h-[45px] h-[35px] px-4 sm:px-6 text-md sm:text-lg font-medium rounded-md transition-all ease-out delay-75 drop-shadow-lg">
                           View Project
                         </button>
                       </Link>
@@ -97,26 +97,30 @@ export default function ProjectModal() {
                   {currentProjectDetail?.codeLink && (
                     <Link href={currentProjectDetail?.codeLink} target="_blank">
                       <button
-                        className="rounded-full border-2 border-gray-300 hover:border-gray-50 p-1 text-gray-300 hover:text-gray-50 "
+                        className="rounded-full border-2 border-gray-200 hover:border-gray-50 p-1 text-gray-300 hover:text-gray-50 "
                         title="View Source Code"
                       >
-                        <FaCode className="text-2xl  transition-all ease-out delay-75 drop-shadow-lg" />
+                        <FaCode className="sm:text-2xl text-xl  transition-all ease-out delay-75 drop-shadow-2xl" />
                       </button>
                     </Link>
                   )}
                 </div>
               </div>
             </div>
-
-            <div>{currentProjectDetail?.description}</div>
-            <div>{currentProjectDetail?.description}</div>
-            <div>{currentProjectDetail?.description}</div>
-            <div>{currentProjectDetail?.description}</div>
-            <div>{currentProjectDetail?.description}</div>
-            <div>{currentProjectDetail?.description}</div>
-            <div>{currentProjectDetail?.description}</div>
-            <div>{currentProjectDetail?.description}</div>
-            <div>{currentProjectDetail?.description}</div>
+            <div className="px-2 sm:px-4 sm:relative sm:-top-[30px] pb-4">
+              <h2 className="text-3xl font-semibold text-gray-100 ">
+                {currentProjectDetail?.name}
+              </h2>
+              <h3 className="text-md font-normal text-gray-300">{currentProjectDetail?.description}</h3>
+              <div className="pt-4">
+                <h2 className="text-xl font-medium text-gray-200">
+                  Technologies
+                </h2>
+                <div>
+                  
+                </div>
+              </div>
+            </div>
           </div>
         </Modal>
       </Suspense>
