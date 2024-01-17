@@ -49,7 +49,7 @@ const projectList: Array<PROJECT_DETAIL> = [
   },
   {
     name: "Taskey",
-    description: "Taskey is a ",
+    description: "Taskey is a web-app which allows to manage yoour task.",
     shortDescription: "The ultimate key to task mastery",
     liveLink: "https://taskey.arpanbhandari.com.np/",
     thumbnail: "/images/projects/taskey-thumbnail.png",
@@ -67,7 +67,8 @@ const projectList: Array<PROJECT_DETAIL> = [
   },
   {
     name: "Socioy",
-    description: "Taskey is a ",
+    description:
+      "Socioy is a social media site developed as a school project. It allows use to post moments, be friends, and chat. It implement sophisticated search algorithms, and recommendation system.",
     shortDescription: "A social media webapp",
     codeLink: "https://github.com/arpan404/socioy-webapp-basic",
     thumbnail: "/images/projects/socioy-thumbnail.png",
@@ -77,7 +78,8 @@ const projectList: Array<PROJECT_DETAIL> = [
   },
   {
     name: "EnKrypt",
-    description: "A custom encryption algorithm",
+    description:
+      "EnKrypt is a custom encryption and decryption algorithm, that acts as an additional layer over the existing popular algorithm.",
     shortDescription: "A custom encryption algorithm",
     codeLink: "https://github.com/arpan404/enkrypt",
     thumbnail: "/images/projects/enkrypt-thumbnail.png",
@@ -87,7 +89,8 @@ const projectList: Array<PROJECT_DETAIL> = [
   },
   {
     name: "Ende",
-    description: "Taskey is a ",
+    description:
+      "Ende is a web-app that allows user to securely encrypt and decrypt message.",
     shortDescription: "A webapp for encryption of messages",
     codeLink: "https://github.com/arpan404/ende",
     thumbnail: "/images/projects/ende-thumbnail.png",
@@ -96,7 +99,8 @@ const projectList: Array<PROJECT_DETAIL> = [
   },
   {
     name: "Hotel App",
-    description: "Taskey is a ",
+    description:
+      "This webapp allows the user to book hotel room, and contact hotel staffs. It implements local payment gateway. It allows admin to add room, food items, images to gallery, and blogs.",
     shortDescription: "A webapp for hotel.",
     codeLink: "https://github.com/arpan404/joor",
     thumbnail: "/images/projects/hotelapp-thumbnail.png",
@@ -115,7 +119,8 @@ const projectList: Array<PROJECT_DETAIL> = [
   },
   {
     name: "UBT Alpha",
-    description: "Taskey is a ",
+    description:
+      "UBT Alpha is a mobile application, primarily made for Android using React Native. It simulates the EPS TOPIK exam.",
     shortDescription: "A mobile app for simulating exam.",
     liveLink:
       "https://play.google.com/store/apps/details?id=com.arpan404.ubtalpha",
@@ -126,7 +131,8 @@ const projectList: Array<PROJECT_DETAIL> = [
   },
   {
     name: "Newsy",
-    description: "Taskey is a ",
+    description:
+      "Newsy is a web app that uses News API to get news data, and presents them in readable and proper format. It allows seraching news, and fetching news of different categories.",
     shortDescription: "A webapp for getting news",
     codeLink: "https://github.com/arpan404/newsy",
     thumbnail: "/images/projects/newsy-thumbnail.png",
@@ -136,7 +142,8 @@ const projectList: Array<PROJECT_DETAIL> = [
   },
   {
     name: "Texty",
-    description: "Taskey is a ",
+    description:
+      "Texty is a text utility web tool, which I developed while learning React.",
     shortDescription: "A webapp for manipulating strings",
     codeLink: "https://github.com/arpan404/texty",
     liveLink: "https://texty.arpanbhandari.com.np/",
