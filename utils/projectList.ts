@@ -123,7 +123,7 @@ const projectList: Array<PROJECT_DETAIL> = [
       "UBT Alpha is a mobile application, primarily made for Android using React Native. It simulates the EPS TOPIK exam.",
     shortDescription: "A mobile app for simulating exam.",
     liveLink:
-      "https://play.google.com/store/apps/details?id=com.arpan404.ubtalpha",
+      "https://play.google.com/store/apps/details?id=com.arpan405.alphaubt",
     thumbnail: "/images/projects/ubtalpha-thumbnail.png",
     tech: ["ReactNative", "Typescript", "Expo", "TailwindCSS", "Zustand"],
 
