@@ -49,7 +49,7 @@ export default function BackgroundAudio() {
         </div>
       </label>
       <ReactAudioPlayer
-        src="/audio/background-music.mp3"
+        src="https://arpan404.socioy.com/uploads/background_music_b1d05ac3fb.mp3"
         autoPlay={false}
         preload="metadata"
         controls={false}
